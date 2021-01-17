@@ -302,12 +302,12 @@ alias -g nv='nvidia-smi'
 export PATH=/usr/local/clang/bin:/usr/local/cuda/bin:/opt/ros/melodic/bin/catkin_make:$PATH
 export PATH=$HOME/.githubcli/bin:$PATH
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
-source "/home/michael/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 autoload -U compinit && compinit
 
 #source /opt/ros/melodic/setup.zsh
 #source ~/src/racecar_ws/devel/setup.zsh
-export LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:/usr/local/lib:$LD_LIBRARY_PATH
-export CXX=/usr/local/clang_10.0.0/bin/clang++
+export LD_LIBRARY_PATH=lib/clang/11.0.0/lib:/usr/local/lib:$LD_LIBRARY_PATH
+export CFLAGS="-I lib/clang/11.0.0/include"
+export CXX=/usr/bin/clang++-11
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
